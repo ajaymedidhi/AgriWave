@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css'; // Import the CSS file
-
+import Navbar from '../Navbar';
 const PaymentGateway = () => {
   const [paymentMethod, setPaymentMethod] = useState('creditDebit');
   const [showUPIDetails, setShowUPIDetails] = useState(false);
@@ -21,6 +21,7 @@ const PaymentGateway = () => {
 
   return (
     <>
+    <Navbar/>
       <div className='payment-gate-cont'>
         <div className="payment-container">
           <h1 id='payment-heading'>Payment Gateway</h1>

@@ -1,5 +1,6 @@
 // PostProperty.js
 import React, { useState } from 'react';
+import Navbar from '../Navbar';
 
 import './index.css'; // Linking the CSS file
 
@@ -52,6 +53,8 @@ const PostProperty = () => {
   };
 
   return (
+    <>
+    <Navbar/> 
     <div className="post-property-container">
       <div className="text-and-image">
         <h1>Post Property for Free</h1>
@@ -134,6 +137,7 @@ const PostProperty = () => {
         
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,10 +1,10 @@
 .navbar {
-  background-color: #006ac2;
+  background-color: #007f66;
   height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 .logo-heading{
   font-family: 'PT Sans', sans-serif;
@@ -33,7 +33,7 @@
   list-style: none;
   text-align: center;
   width: 70vw;
-  justify-content: end;
+  justify-content: center;
   margin-right: 2rem; 
   padding-top: 10px;
 }
@@ -43,7 +43,11 @@
   align-items: center;
   height: 80px;
 }
-
+.nav-item-3 {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
 .nav-links {
   color:white;
   text-decoration: none; 
@@ -276,5 +280,72 @@
   }
   100% {
     transform: translateY(-3px);
+  }
+}
+
+
+
+.menu-icon-nav i {
+  color: #fff; /* Icon color */
+  font-size: 1.8rem; /* Icon size */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.menu-icon-nav:hover {
+  background-color: #005844; /* Change background color on hover */
+}
+
+.menu-icon-nav:hover i {
+  transform: scale(1.1); /* Increase icon size on hover */
+}
+
+.menu-icon-nav {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  border-radius: 50%; /* Make it circular */
+  background-color: #007f66; /* Your desired background color */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+@media screen and (max-width: 667px) {
+  .menu-icon-nav {
+    display: none;
+  }
+}
+
+
+.menu-icon-nav i {
+  color: #fff; /* Icon color */
+  font-size: 1.8rem; /* Icon size */
+}
+
+.dropdown-menu-ham {
+  position: absolute;
+  top: 60px; 
+  right: 5px; 
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 10px;
+  border-radius: 4px; 
+  max-width: 350px;
+}
+
+.dropdown-menu-ham p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.dropdown-menu-ham p:hover {
+  color: #007f66; 
+}
+
+@media screen and (max-width: 960px) {
+  .dropdown-menu-ham {
+    top: 60px; 
+    right: 0; 
   }
 }

@@ -202,6 +202,22 @@
       font-size: 43px;
       text-align: right;
     }
+
+    @keyframes slideInFromBottom {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .home-content {
+      animation: slideInFromBottom 0.5s ease-in-out forwards; /* Apply animation */
+    }
+
     
 .service-item {
   margin: 20px;
@@ -328,7 +344,7 @@
     font-family: 'PT Sans', sans-serif;
     color:  #0b69ff;
     font-weight: 550;
-    font-size: 25px;
+    font-size: 35px;
     text-decoration: none; 
     padding: 10px;
 }
@@ -353,7 +369,7 @@
 
 
 .heading-2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 10px 0;
 }
 
@@ -447,30 +463,6 @@
 
 
 
-.home-desktop-img {
-  width: 59%;
-  max-width: 510px;
-  margin-left: 45px;
-  border-radius: 6px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInBounce 1.5s ease-out forwards;
-}
-
-@keyframes fadeInBounce {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .button-sign {
   background-color: #4CAF50; /* Green */
@@ -492,61 +484,44 @@
 .button-sign:hover {
   background-color: #45a049; /* Darker Green */
 }
-
-
-
-.cities-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 40px;
-  padding-top: 50px;
-}
-
-.city-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  max-width: 150px;
-}
-
-.city-button:hover {
-  /* Styles for hover effect */
-  background-color:#006ac2;
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.city-image {
-  width: 100px;
-  height: 100px;
+.button-sign {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 10px;
+  border-radius: 8px;
+  position: relative;
   overflow: hidden;
-  border-radius: 50%;
-  margin-bottom: 10px;
 }
-.city-image img {
+
+.button-sign::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background: linear-gradient(90deg, rgba(255,255,255,0.4), transparent, rgba(255,255,255,0.4));
+  background-size: 300% 100%;
+  animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }
 
 
-.city-text {
-  text-align: center; 
-  font-family: 'PT Sans', sans-serif;
-}
-
-.city-heading{
-  text-align: center;
-  padding-bottom: 10px;
-} 
 
 /* PropTextContainer.css */
 
@@ -729,7 +704,9 @@
 .gallery-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
+  padding-top: 30px; 
+  padding-bottom: 20px;
 }
 
 .container-video,
@@ -748,7 +725,7 @@
 {
   width: 100%;
   height: 320px; /* Set the desired height */
-  overflow: hidden;
+  overflow: hidden;  padding-top: 50px; 
 }
 .photo-container-1 {
   width: 700px;
@@ -813,7 +790,7 @@
 }
 
 .img-2 {
-  max-width: 80%;
+  max-width: 60%;
   height: auto;
 }
 
@@ -833,6 +810,18 @@
  width: 1100px;
 
 
+}
+@media screen and (max-width:567px) {
+  .industries-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+  }
+  .industry-item img {
+    width: 70px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .industry-item {
@@ -865,4 +854,20 @@
   text-align: center;
   margin-left: 20px; 
   color: #45a049;
+}
+
+.heading-view{
+  background-color: #68aef8;
+  color: white; 
+  border-radius: 8px;
+  padding: 8px; 
+  font-size: 20px;
+}
+
+.main-heading-view{
+  background-color: #68aef8;
+  color: white; 
+  border-radius: 8px;
+  padding: 8px; 
+  font-size: 22px;
 }

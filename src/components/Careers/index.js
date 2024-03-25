@@ -34,7 +34,7 @@ const Career = () => {
     <>
       <Navbar/> 
       <div className="career-container">
-        <h1 className="career-heading">Career Opportunities @ proptelligence.net</h1>
+        <h1 className="career-heading">careers@ proptelligence.net</h1>
         <p>Interested in joining our team? Fill out the form below and upload your resume.</p>
         <form onSubmit={handleSubmit} className="career-form">
           <div>

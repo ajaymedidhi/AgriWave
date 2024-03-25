@@ -1,58 +1,34 @@
 import {Link} from 'react-router-dom'
+import React, { useEffect } from 'react';
 import Navbottom from '../Navbottom'
 import YouTubeEmbed from '../YouTubeEmbed';
 import Navbar from '../Navbar'
+import Image from '../Image'
+import IndustrySlider from '../IndustrySlider' 
+import Tech2 from '../Tech2'
 import './index.css'
 const Home = () => { 
-  const cityImages = {
-    Mumbai: 'https://img.freepik.com/premium-photo/taj-mahal-hotel_78361-4512.jpg',
-    Delhi: 'https://img.freepik.com/premium-photo/india-gate-background-cloudy-sky-sightseeing-new-delhi-view-from-road_431724-6913.jpg',
-    Bangalore: 'https://as2.ftcdn.net/v2/jpg/03/11/94/23/1000_F_311942374_cK69g8ORWymuDTy6CuuRd8LSGgy8l93D.jpg',
-    Hyderabad: 'https://img.freepik.com/premium-vector/illustration-famous-indian-monument-charminar_674037-19.jpg',
-    Kolkata: 'https://procaffenation.com/wp-content/uploads/2017/04/beautiful-view-of-howrah-bridge-at-evening-compressor.jpg',
-    Chennai: 'https://img.freepik.com/premium-vector/chennai-skyline-detailed-silhouette-trendy-vector-illustration_668947-1201.jpg',
-    Pune: 'https://www.tourmyindia.com/images/trimbakeshwar-shiva-temple-nashik1.jpg',
-    Ahmedabad: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sheth_Hutheesinh_Temple.jpg/800px-Sheth_Hutheesinh_Temple.jpg',
-  };
+  useEffect(() => {
+    // Create script element
+    const script = document.createElement('script');
+    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.dataset.useServiceCore = true;
+    script.defer = true;
 
-  const cities = [
-    'Bangalore',
-    'Mumbai',
-    'Chennai',
-    'Delhi',
-    'Hyderabad',
-    'Kolkata',
-    'Pune',
-    'Ahmedabad',
-  ];
+    // Append script to the document body
+    document.body.appendChild(script);
+
+    // Cleanup function to remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   
 
     return(
       <>
     <Navbar /> 
-   
-    <div className="cities-container"> 
-        {cities.map((city) => (
-          <div
-            key={city}
-            className="city-button"
-           
-          >
-            <div className="city-image">
-              <Link to="/prop">
-              <img
-                src={cityImages[city]}
-                alt={`${city} Image`}
-                style={{ width: '100%', height: '100%' }}
-              />
-              </Link>
-            </div>
-            <div className="city-text">{city}</div>
-          </div>
-        ))}
-    </div> 
-
     <div className="home-container">
       <div className="home-content">
         <h1 className="home-heading">
@@ -78,8 +54,7 @@ const Home = () => {
         alt="dresses to be noticed"
         className="home-desktop-img"
       />
-    </div>  
-
+    </div> 
     <div>
     <h2 className="service-heading">Industries</h2> 
     <div className="home-page">
@@ -103,10 +78,8 @@ const Home = () => {
        </div>
      </div>
    </div>
-    </div>
-    
-    
-
+    </div> 
+     <Tech2/>
     <div className="service-section">
       <h2 className="service-heading">Our Services</h2>
       <div className="services-container">
@@ -122,10 +95,6 @@ const Home = () => {
           <p className="prop-text-service-description">
         At Proptelligence, we recognize the challenges faced by property owners and strive to provide innovative solutions tailored 
         to their needs. 
-        That's why we provide free property management services, setting us apart from traditional 
-        agencies. Our holistic approach encompasses every aspect of property service management, from
-         tenant acquisition to maintenance and repair. With Proptelligence, you can rest assured that
-          your investments are in capable hands.
 
         </p>
         </div>
@@ -140,27 +109,30 @@ const Home = () => {
           
           <h1 className='heading-2'>Legal Services</h1>
           <p className="prop-text-service-description">
-          Navigating the legal complexities of real estate transactions can be daunting. Proptelligence simplifies this process by offering tailored legal services to meet your needs. Our team of experienced legal professionals provides online legal advice and assistance, ensuring seamless transactions and compliance with legal regulations. Whether you're buying, selling, or leasing property, trust Proptelligence for reliable legal services in India and beyond.
+          Navigating the legal complexities of real estate transactions can be daunting.
         </p>
         </div>
       </div>
 
 
      
-      <div class="gallery-container">
+  <div class="gallery-container">
   <div class="container-photo">
     <div class="header-photo">
-      <h1>Photo Gallery</h1>
-      <h2>View All</h2>
+      <h1 className='main-heading-view'>Photo Gallery</h1>
+      <h2 className='heading-view'>View All</h2>
     </div>
     <div class="photo-container">
-      <img class='img-2' src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150765.jpg" alt="Gallery" />
+    
+      <Image/>
+    
     </div>
+       
   </div>
   <div class="container-video">
     <div class="header-video">
-      <h1>Video Gallery</h1>
-      <h2>View All</h2>
+      <h1 className='main-heading-view'>Video Gallery</h1>
+      <h2 className='heading-view'>View All</h2>
     </div>
     <div class="video-container">
       <YouTubeEmbed embedId="sA5wHmkAQB8" />
@@ -169,10 +141,7 @@ const Home = () => {
       </div>
 
 
-    </div>   
-
-    
-   
+    </div> 
     <footer>
       
       <Navbottom/>

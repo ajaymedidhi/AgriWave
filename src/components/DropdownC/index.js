@@ -25,7 +25,7 @@ const MenuItems = [
       cName: 'dropdown-link'
     },
     {
-      title: 'Carrers',
+      title: 'Careers',
       path: '/careers',
       cName: 'dropdown-link'
     },

@@ -132,7 +132,7 @@ button[type='submit']:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
   background-color: #f7f7f7;
 }
 
@@ -225,4 +225,27 @@ button[type='submit']:hover {
 
 .list-el{
   text-decoration: none;
+}
+
+.address-details {
+  border: 3px solid #ccc;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.address-details h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.address-details p {
+  color: #666;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+.address-img{
+  width: 100px;
+  height: 100px;
 }

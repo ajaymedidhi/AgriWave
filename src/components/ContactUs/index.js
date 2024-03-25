@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../Footer'
 import Navbar from '../Navbar';
 import {Link} from 'react-router-dom'
+
 import './index.css'
 
 const ContactUs = () => {
@@ -25,7 +26,7 @@ const ContactUs = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:3000/send-email', {
+      const response = await fetch('https://biha7udegc.execute-api.ap-south-1.amazonaws.com/prod/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,46 +68,19 @@ const ContactUs = () => {
             Feel free to get in touch with us. We are here to assist you with
             any inquiries or concerns you may have.
           </p>
-          <div className="contact-details">
-            <p>Say Hello</p>
-            <p>8062181169</p>
-            <p>connect@proptelligence.net</p> 
-          </div>
-          {/* Add Social Media Buttons */}
-          <div className="social-media-buttons">
-            <a href='https://www.facebook.com/proptelligence'>
-              <img
-                src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" // Replace with the actual image URL
-                alt="Facebook"
-              />
-            </a>
-            <a href="https://www.x.com/proptelligence" target="_blank">
-              <img
-                src="https://img.freepik.com/premium-vector/vector-new-twitter-logo-x-2023-twitter-x-logo-twitter-with-black-circle_982187-137.jpg" // Replace with the actual image URL
-                alt="Twitter"
-              />
-            </a>
-
-            <a href="https://www.linkedin.com/company/proptelligence/">
-              <img
-                src="https://img.freepik.com/premium-vector/linkedin-app-icon-world-s-largest-professional-network-social-networking-jobs-careers_277909-476.jpg" // Replace with the actual image URL
-                alt="LinkedIn"
-              />
-            </a>
-
-            <a  href="https://www.instagram.com/proptelligence" target="_blank">
-              <img
-                src="https://img.freepik.com/premium-vector/instagram-icon-paper-cut-style-social-media-icons_505135-235.jpg" // Replace with the actual image URL
-                alt="Instagram"
-              />
-            </a>
+        
+          <div className="address-details">
+            <h2>Address </h2>
+            <img className='address-img' src="https://img.freepik.com/free-vector/destination-concept-international-travel-journey-red-pointer-with-grey-world-map-inside_333792-53.jpg"/>
+            <p>We Work Prestige Atlanta, 80 Feet Rd, Koramangala 1A Block, Koramangala 3 Block, Koramangala, Bengaluru, Karnataka</p> 
+            <p>info@proptelligence.net</p>
           </div>
         </div>
         <div className="contact-form">
           <h3>Send us a message</h3>
           <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="firstName">First Name:</label>
+            <label htmlFor="firstName">Name</label>
             <input
               type="text"
               id="firstName"
@@ -117,7 +91,7 @@ const ContactUs = () => {
             />
           </div>
           <div>
-            <label htmlFor="lastName">Last Name:</label>
+            <label htmlFor="lastName">Mobile Number</label>
             <input
               type="text"
               id="lastName"
@@ -162,9 +136,10 @@ const ContactUs = () => {
           </p>
         )}
         </div>
-      </div>
+      </div> 
+      
     </div> 
-
+   
     <Footer/>
     </>
   );

@@ -1,13 +1,20 @@
+import React, { useEffect } from 'react';
 import './index.css'
 
 import Footer from '../Footer'
 
-const RefundPolicy = () => (
+const RefundPolicy = () =>{
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when component mounts
+  }, []);
+
+
+return(
   <> 
  
-    <div className="cont-101">
-      <div className="about-us-1">
-        <div className='about-cont-1'>
+    <div className="privacy-cont">
+      <div className="privacy-policy">
+        <div className='privacy-cont-1'>
         <h2>Returns & Refunds policy</h2>
         </div> 
         <p>You are entitled to cancel your order within 30 days without giving any reason for doing so</p>
@@ -29,12 +36,12 @@ goods. We will use the same means of payment as you used for the order, and you 
 any fees for such reimbursement.</p>
         <h3>Conditions for returns:</h3>
         <p>In order for the goods to be eligible for a return, please make sure that:</p> 
-        <ul>
+        <ul className='p-list-cont'>
             <li>The goods were purchased in the last 30 days</li>
             <li>The goods are in the original packaging</li>
         </ul>
         <h3>The following goods cannot be returned:</h3>
-       <ul>
+       <ul className='p-list-cont'>
         <li>The supply of goods made to your specifications or clearly personalized.</li>
         <li>The supply of goods which according to their nature are not suitable to be returned, for 
             example goods which deteriorate rapidly or where the date of expiry is over</li>
@@ -75,6 +82,6 @@ info@proptelligence.net</p>
     </div> 
    
   </>
-)
+) }
 
 export default RefundPolicy

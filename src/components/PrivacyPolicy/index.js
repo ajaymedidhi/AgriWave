@@ -1,13 +1,18 @@
-import './index.css'
-import Navbar from '../Navbar' 
-import Footer from '../Footer'
+import React, { useEffect } from 'react';
+import './index.css';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 
-const About = () => (
-  <> 
- 
-    <div className="cont-101">
-      <div className="about-us-1">
-        <div className='about-cont-1'>
+const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when component mounts
+  }, []);
+
+  return (
+    <>
+      <div className="privacy-cont">
+      <div className="privacy-policy">
+        <div className='privacy-cont-1'>
         <h2>Privacy Policy</h2>
         </div>
         <p>
@@ -49,7 +54,7 @@ Users who are uncertain about what information is mandatory are welcome to conta
 
 <h3>Rights List:</h3>
     <p>
-    <ul>
+    <ul className='p-list-cont'>
         <li>The right to be informed.</li>
         <li>The right of access.</li>
         <li>The right to rectification.</li>
@@ -95,11 +100,11 @@ Users who are uncertain about what information is mandatory are welcome to conta
         </p>
 
       </div>
-    </div> 
+      </div>
+    
+    </>
+  );
+};
 
 
-   
-  </>
-)
-
-export default About
+export default PrivacyPolicy;

@@ -28,7 +28,7 @@ const Insights = () => {
               Blogs 
             </h2>
             <p className='slide-des'>
-            Our blogs cover a wide array of topics, from industry trends and market analysis to practical tips and expert advice.......<Link to="/blog"><span>Read More</span></Link>
+            Our blogs cover a wide array of topics, from industry trends and market analysis to practical tips and expert advice.......<Link to="/blogdetails"><span>Read More</span></Link>
             </p>
           </div>
 
@@ -45,7 +45,7 @@ const Insights = () => {
               Reports & Insights.
             </h2>
             <p className='slide-des'>
-            Our Reports & Insights section serves as a hub for in-depth analysis, comprehensive research, and actionable intelligence tailored to property owners, managers, investors, and industry professionals.<Link to="/blog2"><span>Read More</span></Link>
+            Our Reports & Insights section serves as a hub for in-depth analysis, comprehensive research, and actionable intelligence tailored to property owners, managers, investors, and industry professionals.<Link to="/blogdetails"><span>Read More</span></Link>
             </p>
           </div>
    

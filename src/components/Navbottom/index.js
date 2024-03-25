@@ -69,19 +69,19 @@ function Navbottom() {
             <Link to='/prop'>Propeties in Telangana</Link>
           </li>
           <li className='li-item'>
-            <Link to='/prop'>Propeties in Hyderabad</Link>
+            <Link to='/prop'>Properties in Karnataka</Link>
           </li>
           <li className='li-item'> 
-            <Link to='/prop'>Propeties in Mumbai</Link>
+            <Link to='/prop'>Properties in Andrapradesh</Link>
           </li> 
           <li className='li-item'>
-            <Link to='/prop'>Propeties in Delhi</Link>
+            <Link to='/prop'>Properties in Tamilnadu</Link>
           </li>
           <li className='li-item'>
-            <Link to='/prop'>Propeties in Pune</Link>
+            <Link to='/prop'>Properties in Maharastra</Link>
           </li>
           <li className='li-item'> 
-            <Link to='/prop'> Propeties in Kolkata</Link>
+            <Link to='/prop'> Properties in Gujarath</Link>
           </li>
          
           {/* Add more cities as needed */}

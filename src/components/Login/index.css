@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #007bff;
+  background-image: url("https://img.freepik.com/free-vector/cityscape-cartoon-background-panorama-modern-city-with-high-skyscrapers-park-downtown_1441-1982.jpg"); 
+  background-size: cover;
 }
 
 .login__container {

@@ -35,6 +35,14 @@
   margin-bottom: 50px;
   margin: 5px;
 }
+.tech-sections-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin: 5px;
+}
 
 .tech-image {
   position: relative;
@@ -271,13 +279,16 @@
 }
 
 .tech-sections {
-  width: 90%; /* Adjust width for responsiveness */
-  max-width: 500px; /* Maximum width for larger screens */
+  width: 90%; 
+  max-width: 500px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+}
+.fixed{
+  position: absolute;
 }
 
 .tech-image {
@@ -352,3 +363,195 @@
 }
 
 /* Animation... */
+.btn-ai{
+  background-color: #666;
+  border-radius: 5px;
+}
+
+/* Your existing CSS styles... */
+
+/* Additional CSS for fixed containers */
+.tech-sections {
+  width: 45%; /* Adjust width as needed */
+  margin-bottom: 20px; /* Spacing between sections */
+  min-width: 300px; /* Set minimum width for responsiveness */
+  transition: height 0.3s ease; /* Add transition effect for height changes */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.prop-text-service-description {
+  max-height: 100px; /* Set maximum height for initial content */
+  overflow: hidden; /* Hide overflow content */
+  transition: max-height 0.3s ease; /* Add transition effect for height changes */
+}
+
+.prop-text-service-description.expand {
+  max-height: none; /* Expand to full height */
+}
+
+/* Additional styles for buttons */
+.btn-ai {
+  background-color: #666;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* List container */
+.animated-list-container {
+  margin-top: 20px;
+  text-align: center; /* Center list items */
+}
+
+.cont-101 {
+  margin-top: 20px;
+  text-align: left; /* Adjust text alignment */
+}
+
+.list-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  list-style: decimal;
+  text-align: left;
+}
+
+.list-item::before {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  background-color: #3498db;
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applying the animation to the list items */
+.list-item {
+  animation: fadeInUp 0.5s ease-in-out both; /* Applying the animation */
+}
+
+/* Additional styles for responsive layout */
+@media screen and (max-width: 768px) {
+  .tech-sections {
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 500px; /* Maximum width for larger screens */
+  }
+}
+
+.tech-sections {
+  width: 50%; /* Adjust width as needed */
+  margin-bottom: 5px; /* Spacing between sections */
+  min-width: 380px; /* Set minimum width for responsiveness */
+  height: 400px; /* Set a fixed height for each section */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.prop-text-service-description {
+  max-height: 100px; /* Set maximum height for initial content */
+  overflow: hidden; /* Hide overflow content */
+  transition: max-height 0.3s ease; /* Add transition effect for height changes */
+}
+
+.prop-text-service-description.expand {
+  max-height: none; /* Expand to full height */
+}
+
+/* Additional styles for buttons */
+.btn-ai {
+  background-color: #666;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* List container */
+.animated-list-container {
+
+  text-align: center; /* Center list items */
+}
+
+.cont-101 {
+  margin-top: 0px;
+  text-align: left; /* Adjust text alignment */
+}
+
+.list-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  list-style: none;
+  text-align: left;
+}
+
+.list-item::before {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  background-color: #3498db;
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applying the animation to the list items */
+.list-item {
+  animation: fadeInUp 0.5s ease-in-out both; /* Applying the animation */
+}
+
+/* Additional styles for responsive layout */
+@media screen and (max-width: 768px) {
+  .tech-sections {
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 500px; /* Maximum width for larger screens */
+    height: auto; /* Allow sections to expand based on content */
+  }
+}
+
+.aj{
+  display: flex;
+  flex-direction: column; 
+  width: 45%; /* Adjust width as needed */
+  margin-bottom: 5px; /* Spacing between sections */
+  min-width: 300px;
+}

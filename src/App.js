@@ -26,6 +26,7 @@ import Blog3 from './components/Blog3'
 import Blog4 from './components/Blog4'
 import Insights from './components/Insights' 
 import Careers from './components/Careers'
+import Team from './components/Team' 
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -123,9 +124,13 @@ function App() {
 
   
   return (
-    <BrowserRouter> 
+    <BrowserRouter>  
 
       <Helmet>
+        <meta name="Legal Services" content="Proptelligence is an AI-powered real estate and legal platform that helps agents, attorneys, and other real estate professionals find and procure properties." /> 
+        <meta name="Property Services" content="Navigating the legal complexities of real estate transactions can be daunting. Proptelligence simplifies this process by offering tailored legal services to meet your needs." /> 
+        <meta name="Industries" content="Property Technologies has worked with a range of industries including commercial real estate, residential real estate, hospitality, and healthcare." />
+        <meta name="About us" content="At Proptelligence, we recognize the challenges faced by property owners and strive to provide innovative solutions tailored to their needs." />
         <meta name="msvalidate.01" content="D2A150396A7BEE21CE9769C5C3479F1C" />
         <meta name="google-site-verification" content="google154aa1c8bf93db82.html" />
       </Helmet>
@@ -154,9 +159,9 @@ function App() {
       <Route exact path="/indiarealstate2023" element={<Blog2/>}/> 
       <Route exact path="/buyahome" element={<Blog3/>}/> 
       <Route exact path="/legaladvice" element={<Blog4/>}/> 
-      
       <Route exact path="/insights" element={<Insights/>} /> 
       <Route exact path="/careers" element={<Careers/>} />
+      <Route exact path="/team" element={<Team/>} /> 
       </Routes>
     </BrowserRouter>
   );

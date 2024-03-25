@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaHandshake } from 'react-icons/fa';
+import { FaShoppingCart, FaHandshake } from 'react-icons/fa'; 
+import Navbar from '../Navbar';
 import RenderServices from '../RenderServices';
 import './index.css';
 
@@ -103,7 +104,9 @@ const PropertyManagement = () => {
   };
 
   return (
-    <div className="property-management-services">
+    <> 
+    <Navbar/>
+     <div className="property-management-services">
       <div className="header">
         <Link to="/post">
           <button >Post Property <span className="free-btn">Free</span></button>
@@ -133,6 +136,7 @@ const PropertyManagement = () => {
       {renderCategories()}
       <RenderServices selectedOption={selectedOption} selectedCity={selectedCity} />
     </div>
+    </>
   );
 };
 

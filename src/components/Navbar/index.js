@@ -69,12 +69,12 @@ function Navbar() {
       <nav className='navbar'>
          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
            <img src="https://res.cloudinary.com/ajaymedidhi7/image/upload/v1702143803/rsz_yaja_1_bn6fjb.jpg" alt="logo" className='website-logo'/>
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
+        </Link> 
+          <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          {/* Conditionally render login/logout button */}  
+        <ul className="nav-menu">
+          
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
               Home
@@ -93,10 +93,8 @@ function Navbar() {
             >
               Services <i className='fas fa-caret-down' />
             </Link>
-            {servicesDropdown && <DropdownS />} {/* Display Services dropdown */}
+            {servicesDropdown && <DropdownS />} 
           </li>
-
-          {/* Technologies */}
           
           <li
             className='nav-item'
@@ -123,18 +121,17 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Company <i className='fas fa-caret-down' />
+             Our Company <i className='fas fa-caret-down' />
             </Link>
             {companyDropdown && <DropdownC />} {/* Display Services dropdown */}
           </li>
 
        
-          <li className='nav-item'>
+          <li className='nav-item-3'>
           <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-          {/* Add animation classes and styles */}
-          <div className='phone-container'>
+          <div className='phone-container'> 
+          <span className='phone-icon'>&#128222;</span>
             <span className='phone-text'>8062181169</span>
-            <span className='phone-icon'>&#128222;</span>
           </div>
         </Link>
           </li>
@@ -149,9 +146,18 @@ function Navbar() {
               </button>
             </>
           ) : (
-            <Link to="/signup">
-            <button className="btn-2"><span className="free-btn">Free</span> Property Post</button>
-          </Link>
+            <nav className='navbar'>
+            <div className='menu-icon-nav' onClick={handleClick}>
+              <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            </div>
+            {click && (
+              <div className='dropdown-menu-ham'>
+                 <p >Welcome {name} 👋 </p>
+               <Link to="/login"> <button>Login</button></Link>
+                <p>Your Services</p>
+              </div>
+            )}
+          </nav>
           )}
       </nav>
     </>
