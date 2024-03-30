@@ -1,0 +1,91 @@
+/* index.css */
+.cont-1 {
+    padding: 20px;
+  }
+  
+  .about-us {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-cont {
+    margin-bottom: 20px;
+  }
+  
+  .about-cont h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .state-container {
+    flex: 1 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .state-container:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .state-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .state-details {
+    padding: 20px;
+  }
+  
+  .state-details p {
+    margin: 0;
+  }
+  
+  .state-schemes {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .state-schemes h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .state-schemes ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .state-schemes li {
+    margin-bottom: 10px;
+  }
+  
+  .state-schemes li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Media Query for responsiveness */
+  @media screen and (min-width: 768px) {
+    .state-container {
+      flex: 1 0 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+  }
+  
+  .logo-img{
+   width: 150px;
+  }

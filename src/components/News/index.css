@@ -1,0 +1,133 @@
+/* index.css */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .news-item {
+    /* Your styles for news items */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .news-item:hover {
+    transform: scale(1.05); /* Increases the size by 5% on hover */
+  }
+  
+  
+  .news-item {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-image {
+    margin-bottom: 20px;
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .news-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .news-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Media Query for responsiveness */
+  @media screen and (min-width: 768px) {
+    .news-item {
+      width: calc(50% - 40px);
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .news-item {
+      width: calc(33.33% - 40px);
+    }
+  }
+  
+  .about-us {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+   
+
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #020d13;
+    font-weight: 45s0;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for headings within the paragraphs */
+  .about-us p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .about-us {
+      padding: 15px;
+      border-radius: 0;
+    }
+  
+    .about-us h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-us p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .cont-1 {
+
+    padding: 10px;
+    background-color: #03b2cb;
+  }
+
+  .about-cont{
+    background-color: #e6f6ff;
+    padding: 25px;
+    max-width: 1200px;
+    border-radius: 6px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }

@@ -19,20 +19,20 @@ import {
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyB4vFK2IcRWmwQ2YYR5wn0JVB_ki6u5yyM",
+  apiKey: "AIzaSyAG37DL_Ej4dI7JuU_KPnUNfrTfxFRyM74",
 
-  authDomain: "proptelligence-2b035.firebaseapp.com",
-  databaseURL: "https://proptelligence-2b035-default-rtdb.asia-southeast1.firebasedatabase.app",
+  authDomain: "proptelligence-6bbba.firebaseapp.com",
+  databaseURL: "https://proptelligence-6bbba-default-rtdb.asia-southeast1.firebasedatabase.app",
 
-  projectId: "proptelligence-2b035",
+  projectId: "proptelligence-6bbba",
 
-  storageBucket: "proptelligence-2b035.appspot.com",
+  storageBucket: "proptelligence-6bbba.appspot.com",
 
-  messagingSenderId: "945926980348",
+  messagingSenderId: "479356218672",
 
-  appId: "1:945926980348:web:76d7bdd78d9075c8b8cd79",
+  appId: "1:479356218672:web:b0e92d21f53c0845c22cf5",
 
-  measurementId: "G-CLFV60S60Q" 
+  measurementId: "G-7HS40X0BBY" 
 
 };
 

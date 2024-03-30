@@ -1,17 +1,13 @@
 import {Link} from 'react-router-dom'
 import React, { useEffect } from 'react';
 import Navbottom from '../Navbottom'
-import YouTubeEmbed from '../YouTubeEmbed';
 import Navbar from '../Navbar'
-import Image from '../Image'
-import IndustrySlider from '../IndustrySlider' 
-import Tech2 from '../Tech2'
 import './index.css'
 const Home = () => { 
   useEffect(() => {
     // Create script element
     const script = document.createElement('script');
-    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.src = 'https://www.googletagmanager.com/ns.html?id=GTM-WH9TSZ5B';
     script.dataset.useServiceCore = true;
     script.defer = true;
 
@@ -22,125 +18,130 @@ const Home = () => {
     return () => {
       document.body.removeChild(script);
     };
+  }, []); 
+  useEffect(() => {
+    // Google Tag Manager (gtag.js)
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MPNXW889Q5';
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-MPNXW889Q5');
+
+    // Cleanup function
+    return () => {
+      // Remove the script when unmounting the component
+      document.head.removeChild(script);
+    };
   }, []);
+
 
   
 
     return(
       <>
-    <Navbar /> 
+    <Navbar />  
+    
     <div className="home-container">
       <div className="home-content">
         <h1 className="home-heading">
-        Unlock Our Free Property Service
+        Welcome to AgriWave - Your Farming Oasis🌾
         </h1>
         <img
-          src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
+          src="https://nepalesevoice.com/wp-content/uploads/2020/11/5fa3ae1c907da_chiya-bagan-1-818x450-1.jpg"
           alt="clothes to be noticed"
           className="home-mobile-img"
         />  
       
         <p className="home-description">
-        Experience effortless property management with Proptelligence. 
-        With our free services,
-         managing your properties has never been easier.
+        Discover a world of agricultural marvels at AgriWave! Stay updated with
+         the latest farming trends, including insider insights on Minimum Support Prices. Whether 
+         you're a seasoned farmer or a novice, we're here to support you with practical tips and captivating 
+         stories. Join us on a journey to uncover the secrets of modern agriculture, from cutting-edge technology to
+          sustainable farming practices.
         </p> 
-       <Link to="/signup">
-       <button className='button-sign'>Sign up For Free</button>
+       <Link to="/agri">
+       <button className='button-sign'>Discover Farming Delights</button>
        </Link>
       </div>
       <img
-        src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
+        src="https://nepalesevoice.com/wp-content/uploads/2020/11/5fa3ae1c907da_chiya-bagan-1-818x450-1.jpg"
         alt="dresses to be noticed"
         className="home-desktop-img"
       />
     </div> 
-    <div>
-    <h2 className="service-heading">Industries</h2> 
-    <div className="home-page">
-     
-     <div className="industries-row">
-       <div className="industry-item">
-         <img src="https://static.wixstatic.com/media/a3c153_749eb800f1a64c549de4e7acff06d1bb~mv2.jpg/v1/crop/x_936,y_0,w_3744,h_3744/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/alex-mNJ7c7-XCZQ-unsplash.jpg" alt="Real Estate" />
-         <p id='indus-des'>Real Estate / Prop Tech</p>
-       </div>
-       <div className="industry-item">
-         <img src="https://static.wixstatic.com/media/11062b_ddb09609a7b04f8f9a9c7cf1ee5d126c~mv2.jpeg/v1/crop/x_816,y_0,w_3264,h_3264/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Reviewing%20Legal%20Agreement.jpeg" alt="Legal" />
-         <p id='indus-des'>Legal Tech</p>
-       </div>
-       <div className="industry-item">
-         <img src="https://static.wixstatic.com/media/11062b_be6d973aaa1748aca87d52fbd1af37f0~mv2.jpg/v1/crop/x_1216,y_0,w_3126,h_3126/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Building%20Robot.jpg" alt="Education" />
-         <p id='indus-des'>Edu Tech</p>
-       </div>
-       <div className="industry-item">
-         <img src="https://static.wixstatic.com/media/11062b_89d64fe6a4e346ee80847d38a9e4c991~mv2.jpg/v1/crop/x_834,y_0,w_3333,h_3333/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Agriculture%20Drone.jpg" alt="Agri Tech" />
-         <p id='indus-des'>Agri Tech</p>
-       </div>
-     </div>
-   </div>
+    <div> 
+    <h1 className='heading-service'>Our Mission</h1> 
+        <div className="mission-container">
+      <img src="https://cdn.downtoearth.org.in/library/large/2017-01-20/0.68426300_1484913690_55-20170131.jpg" alt="" className="mission-image" />
+      <div className="mission-content">
+        <h2> Empowering Farmers Across India</h2>
+        <p>We empower farmers across India with knowledge, resources, and market access, ensuring they receive fair prices for their produce and are equipped with the latest farming techniques and information.</p>
+      </div> 
+      
+ 
+    
+      </div>  
+
+       <div className="mission-container">
+      <div className="mission-content">
+        <h2>Empowering Farmers and Strengthening Communities</h2>
+        <p>
+        We strive to bridge the gap between farmers and government schemes, fostering a <br/>
+        thriving agricultural ecosystem that sustains livelihoods and enriches communities.
+        </p>
+      </div> 
+      <img src="https://www.indiancooperative.com/wp-content/uploads/2018/08/group-of-farmers-1054x570.jpg" alt="" className="mission-image-2" />
+      
+ 
+    
+      </div>
     </div> 
-     <Tech2/>
-    <div className="service-section">
-      <h2 className="service-heading">Our Services</h2>
-      <div className="services-container">
-        <div className="service-item">
-          <Link to="/prop">
+    <div className="service-section">    
+      <div className="service-section">
+          <h1>Our Services</h1>
+          <div className="services-container">
+            <div className="service-item">
+            <Link to="/news">
             <img
-              src="https://img.freepik.com/premium-vector/security-infests-house-agrees-isometric-illustration_18660-608.jpg"
-              alt="Service 1"
-              className="service-image"
-            />
-          </Link>
-          <h1 className='heading-2'>Property Services</h1>
-          <p className="prop-text-service-description">
-        At Proptelligence, we recognize the challenges faced by property owners and strive to provide innovative solutions tailored 
-        to their needs. 
-
-        </p>
-        </div>
-        <div className="service-item">
-          <Link to="/legalservices">
-            <img
-              src="https://img.freepik.com/premium-photo/consultation-male-lawyer-business-woman-customer_28283-887.jpg"
-              alt="Service 2"
-              className="service-image"
-            />
+                src="https://img.freepik.com/free-photo/farmer-standing-rice-field-with-tablet_1150-6062.jpg"
+                alt="Service 1"
+                className="service-image"
+              />
             </Link>
-          
-          <h1 className='heading-2'>Legal Services</h1>
-          <p className="prop-text-service-description">
-          Navigating the legal complexities of real estate transactions can be daunting.
-        </p>
+              <h3>News</h3>
+              <p>Stay Informed with AgriWave: Access the Latest Updates on Farmers and Market Prices</p>
+            </div>
+            <div className="service-item">
+             <Link to="/msp">
+              <img
+                src="https://i.ytimg.com/vi/-tc6n_hVlDA/maxresdefault.jpg"
+                alt="Service 2"
+                className="service-image"
+              />
+              </Link>
+             
+              <h3>Minimum Support Price</h3>
+              <p>Ensuring Stability with AgriWave: Learn About Minimum Support Prices and Agricultural Sustainability</p>
+            </div>
+            <div className="service-item">
+            <Link to="/benefits">
+              <img
+                src="https://tractorguru.in/upload/tractor/Blogs/For%20Mobile%20Blogs/GOVERNMENT%20SCHEMES%20M%20hindi.jpg"
+                alt="Service 3"
+                className="service-image"
+              />
+               </Link>
+              <h3>Benefits from Government</h3>
+              <p>nlocking Opportunities: Explore the Government's Agricultural Initiatives and Support Programs with AgriWave</p>
+            </div>
+          </div>
         </div>
-      </div>
-
-
-     
-  <div class="gallery-container">
-  <div class="container-photo">
-    <div class="header-photo">
-      <h1 className='main-heading-view'>Photo Gallery</h1>
-      <h2 className='heading-view'>View All</h2>
-    </div>
-    <div class="photo-container">
-    
-      <Image/>
-    
-    </div>
-       
-  </div>
-  <div class="container-video">
-    <div class="header-video">
-      <h1 className='main-heading-view'>Video Gallery</h1>
-      <h2 className='heading-view'>View All</h2>
-    </div>
-    <div class="video-container">
-      <YouTubeEmbed embedId="sA5wHmkAQB8" />
-    </div>
-  </div>
-      </div>
-
-
     </div> 
     <footer>
       

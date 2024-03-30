@@ -72,8 +72,8 @@ const ContactUs = () => {
           <div className="address-details">
             <h2>Address </h2>
             <img className='address-img' src="https://img.freepik.com/free-vector/destination-concept-international-travel-journey-red-pointer-with-grey-world-map-inside_333792-53.jpg"/>
-            <p>We Work Prestige Atlanta, 80 Feet Rd, Koramangala 1A Block, Koramangala 3 Block, Koramangala, Bengaluru, Karnataka</p> 
-            <p>info@proptelligence.net</p>
+            <p>We Work, Roshini Tech Hub, Anand Nagar, Aswath Nagar, Chinnapanna Halli, Bengaluru, Karnataka 560037</p> 
+            <p>connect@proptelligence.net</p>
           </div>
         </div>
         <div className="contact-form">

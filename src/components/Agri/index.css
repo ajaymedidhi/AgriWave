@@ -1,0 +1,35 @@
+.agriculture-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: url("https://nepalesevoice.com/wp-content/uploads/2020/11/5fa3ae1c907da_chiya-bagan-1-818x450-1.jpg");
+    height: 100vh;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section h2 {
+    color: #007bff;
+  }
+  
+  .section p, .section ul {
+    color: #333;
+  }
+  
+  .section ul {
+    list-style-type: none;
+  }
+  
+  .section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .welcome-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

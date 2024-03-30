@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import Dropdown from '../Dropdown';
-import DropdownS from '../DropdownS';
-import DropdownC from '../DropdownC'
-
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 import { auth, db, logout } from "../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
-import axios from 'axios'; // Import Axios for making HTTP requests
-
+import axios from 'axios';
 function Navbar() {
   const [userName, setUserName] = useState(''); 
   const [servicesDropdown, setServicesDropdown,] = useState(false);
@@ -29,50 +24,18 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false); // Function to close mobile menu
 
 
-  // Function to handle user logout
- 
-  const handleServicesHover = () => {
-    if (window.innerWidth >= 960) {
-      setServicesDropdown(true);
-      setTechDropdown(false);
-      setcompanyDropdown(false)
-    }
-  };
 
-  const handleCompanyHover = () => {
-    if (window.innerWidth >= 960) {
-      setServicesDropdown(false);
-      setTechDropdown(false);
-      setcompanyDropdown(true)
-    }
-  };
-
-  const handleTechHover = () => {
-    if (window.innerWidth >= 960) {
-      setTechDropdown(true);
-      setServicesDropdown(false);
-      setcompanyDropdown(false)
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (window.innerWidth >= 960) {
-      setServicesDropdown(false);
-      setTechDropdown(false);
-      setcompanyDropdown(false)
-    }
-  };
  
 
   return (
     <>
       <nav className='navbar'>
          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-           <img src="https://res.cloudinary.com/ajaymedidhi7/image/upload/v1702143803/rsz_yaja_1_bn6fjb.jpg" alt="logo" className='website-logo'/>
+           <img src="https://res.cloudinary.com/dp4svmdan/image/upload/v1711720734/WhatsApp_Image_2024-03-29_at_19.26.53_5104c860_ecjbrh.jpg" alt="logo" className='website-logo'/>
         </Link> 
           <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
+        </div> 
         <ul className="nav-menu">
           
           <li className='nav-item'>
@@ -81,61 +44,56 @@ function Navbar() {
             </Link>
           </li>
 
+         
           <li
             className='nav-item'
-            onMouseEnter={handleServicesHover}
-            onMouseLeave={handleMouseLeave}
           >
             <Link
-              to='/'
+              to='/news'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Services <i className='fas fa-caret-down' />
+              News 
             </Link>
-            {servicesDropdown && <DropdownS />} 
-          </li>
-          
-          <li
-            className='nav-item'
-            onMouseEnter={handleTechHover}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Link
-              to='/'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Solutions <i className='fas fa-caret-down' />
-            </Link>
-            {techDropdown && <Dropdown />} {/* Display Technologies dropdown */}
           </li> 
 
           <li
             className='nav-item'
-            onMouseEnter={handleCompanyHover}
-            onMouseLeave={handleMouseLeave}
+           
+          >
+            <Link
+              to='/msp'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+             MSP 
+            </Link>
+          </li> 
+
+          <li
+            className='nav-item'
           >
             <Link
               to='/'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-             Our Company <i className='fas fa-caret-down' />
+             Contact 
             </Link>
-            {companyDropdown && <DropdownC />} {/* Display Services dropdown */}
+          </li> 
+
+          <li
+            className='nav-item'
+          >
+            <Link
+              to='/signup'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+             Register
+            </Link>
           </li>
 
-       
-          <li className='nav-item-3'>
-          <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-          <div className='phone-container'> 
-          <span className='phone-icon'>&#128222;</span>
-            <span className='phone-text'>8062181169</span>
-          </div>
-        </Link>
-          </li>
-         
          
         </ul>
         {isLoggedIn ? (

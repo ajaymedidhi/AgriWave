@@ -1,0 +1,55 @@
+/* MSP.css */
+.msp-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section h2 {
+    color: #007bff;
+  }
+  
+  .section p, .section ul, .section ol {
+    color: #333;
+  }
+  
+  .section ul, .section ol {
+    list-style-type: none;
+  }
+  
+  .section ul li, .section ol li {
+    margin-bottom: 10px;
+  }
+  
+  .welcome-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .conclusion {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 600px) {
+    .msp-container {
+      padding: 10px;
+    }
+  
+    .section {
+      margin-bottom: 20px;
+    }
+  
+    .welcome-section, .conclusion {
+      padding: 10px;
+    }
+  }
+  
